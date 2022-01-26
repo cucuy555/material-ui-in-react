@@ -20,6 +20,8 @@ const Navbar = () => {
         "& .MuiDrawer-paper": {
           width: drawerWidth,
           boxSizing: "border-box",
+          backgroundColor: "#101F33",
+          color: "rgba(255, 255, 255, 0.7)",
         },
       }}
       variant="permanent"
@@ -28,12 +30,12 @@ const Navbar = () => {
       <Toolbar />
       <Divider />
       <List>
-        {["Inbox", "Starred", "Send email", "Drafts"].map((text, index) => (
-          <ListItem button key={text}>
-            <ListItemIcon>
-              {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+        {mainNavbarItems.map((text, index) => (
+          <ListItem button key={text.id}>
+            <ListItemIcon sx={{ color: "rgba(255, 255, 255, 0.7)" }}>
+              {text.icon}
             </ListItemIcon>
-            <ListItemText primary={text} />
+            <ListItemText primary={text.label} />
           </ListItem>
         ))}
       </List>

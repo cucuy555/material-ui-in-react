@@ -1,38 +1,44 @@
+import DashboardIcon from "@mui/icons-material/Dashboard";
+import MonetizationOnIcon from "@mui/icons-material/MonetizationOn";
+import PublicIcon from "@mui/icons-material/Public";
+import EmojiPeopleIcon from "@mui/icons-material/EmojiPeople";
+import ContactPageIcon from "@mui/icons-material/ContactPage";
+import AgricultureIcon from "@mui/icons-material/Agriculture";
 export const mainNavbarItems = [
   {
     id: 0,
-    icon: <PeopleIcon />,
-    label: "Authentication",
-    route: "authentication",
+    icon: <DashboardIcon />,
+    label: "Dashboard",
+    route: "dashboard",
   },
   {
     id: 1,
-    icon: <DnsIcon />,
-    label: "Database",
-    route: "database",
+    icon: <AgricultureIcon />,
+    label: "Farm",
+    route: "farm",
   },
   {
     id: 2,
-    icon: <ImageIcon />,
-    label: "Storage",
-    route: "storage",
+    icon: <MonetizationOnIcon />,
+    label: "Mint sMKP",
+    route: "mintsmkp",
   },
   {
     id: 3,
     icon: <PublicIcon />,
-    label: "Hosting",
-    route: "hosting",
+    label: "Boardroon",
+    route: "boardroom",
   },
   {
     id: 4,
-    icon: <SettingsEthernetIcon />,
-    label: "Functions",
-    route: "functions",
+    icon: <EmojiPeopleIcon />,
+    label: "Social",
+    route: "social",
   },
   {
     id: 5,
-    icon: <SettingsInputComponentIcon />,
-    label: "Machine learning",
-    route: "machine-learning",
+    icon: <ContactPageIcon />,
+    label: "Contact Us",
+    route: "contact-us",
   },
 ];
