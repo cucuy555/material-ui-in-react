@@ -6,36 +6,23 @@ import Divider from "@mui/material/Divider";
 import ListItem from "@mui/material/ListItem";
 import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
-import InboxIcon from "@mui/icons-material/MoveToInbox";
-import MailIcon from "@mui/icons-material/Mail";
+import { useParams, useNavigate } from "react-router-dom";
+
 import { mainNavbarItems } from "./navbarconst/navbarMainItems";
+import { navbarStyles } from "./navbar.styles";
 
 const Navbar = () => {
-  const drawerWidth = 200;
+  const navigate = useNavigate();
+
   return (
-    <Drawer
-      sx={{
-        width: drawerWidth,
-        flexShrink: 0,
-        "& .MuiDrawer-paper": {
-          width: drawerWidth,
-          boxSizing: "border-box",
-          backgroundColor: "#101F33",
-          color: "rgba(255, 255, 255, 0.7)",
-        },
-      }}
-      variant="permanent"
-      anchor="left"
-    >
+    <Drawer sx={navbarStyles.drawer} variant="permanent" anchor="left">
       <Toolbar />
       <Divider />
       <List>
-        {mainNavbarItems.map((text, index) => (
-          <ListItem button key={text.id}>
-            <ListItemIcon sx={{ color: "rgba(255, 255, 255, 0.7)" }}>
-              {text.icon}
-            </ListItemIcon>
-            <ListItemText primary={text.label} />
+        {mainNavbarItems.map((item, index) => (
+          <ListItem button key={item.id} onClick={() => navigate(item.route)}>
+            <ListItemIcon sx={navbarStyles.icons}>{item.icon}</ListItemIcon>
+            <ListItemText primary={item.label} />
           </ListItem>
         ))}
       </List>

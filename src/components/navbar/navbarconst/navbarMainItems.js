@@ -5,12 +5,12 @@ import EmojiPeopleIcon from "@mui/icons-material/EmojiPeople";
 import ContactPageIcon from "@mui/icons-material/ContactPage";
 import AgricultureIcon from "@mui/icons-material/Agriculture";
 export const mainNavbarItems = [
-  {
-    id: 0,
-    icon: <DashboardIcon />,
-    label: "Dashboard",
-    route: "dashboard",
-  },
+  // {
+  //   id: 0,
+  //   icon: <DashboardIcon />,
+  //   label: "Dashboard",
+  //   route: "dashboard",
+  // },
   {
     id: 1,
     icon: <AgricultureIcon />,
